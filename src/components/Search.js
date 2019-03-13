@@ -15,7 +15,7 @@ class Search extends Component {
   }
 
   onClick(){
-    console.log(this.state.value);
+    this.props.triggerSearch(this.state.value);
   }
 
   onChange(e){
