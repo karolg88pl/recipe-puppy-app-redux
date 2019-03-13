@@ -35,7 +35,11 @@ class App extends Component {
         <Navbar />
         <Switch>
         <Route exact path="/"
-          render={(routeProps)=>(<MainPage {...routeProps} triggerSearch={this.triggerSearch} />)}
+          render={(routeProps)=>(
+            <MainPage {...routeProps}
+             triggerSearch={this.triggerSearch}
+             listData={this.state.data}
+            />)}
         />
         </Switch>
       </React.Fragment>
