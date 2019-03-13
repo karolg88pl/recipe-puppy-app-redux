@@ -1,9 +1,10 @@
 import React from 'react';
+import Search from './Search';
 
 const MainPage = (props) => (
-  <div>
-    MainPage
-  </div>
+  <React.Fragment>
+    <Search />
+  </React.Fragment>
 );
 
 export default MainPage;
