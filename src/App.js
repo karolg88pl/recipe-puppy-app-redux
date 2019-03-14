@@ -12,6 +12,7 @@ class App extends Component {
 
     this.state = {
         data:[],
+        expectResults: false,
         choosenItem:''
     }
 
@@ -21,9 +22,9 @@ class App extends Component {
   triggerSearch(value){
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q=${value}&p=1`)
     .then(res => {
-      console.log(res);
       this.setState({
-          data: res.data.results.sort((a,b)=>(b.title < a.title))
+          data: res.data.results.sort((a,b)=>(b.title < a.title)),
+          expectResults:true
       });
       console.log(this.state.data);
     });
@@ -40,6 +41,7 @@ class App extends Component {
             <MainPage {...routeProps}
              triggerSearch={this.triggerSearch}
              listData={this.state.data}
+             expectResults={this.state.expectResults}
             />)}
         />
         </Switch>
