@@ -26,9 +26,11 @@ class Search extends Component {
     return (
       <React.Fragment>
       <TextField
-        placeholder="Search ingridient"
+        placeholder="Search ingredient"
         value={this.state.value}
         onChange={this.onChange}
+        autoFocus={true}
+        fullWidth={true}
       />
       <Button
         variant="contained" color="secondary"
