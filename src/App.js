@@ -21,6 +21,7 @@ class App extends Component {
   triggerSearch(value){
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q=${value}&p=1`)
     .then(res => {
+      console.log(res);
       this.setState({
           data: res.data.results.sort((a,b)=>(b.title < a.title))
       });
