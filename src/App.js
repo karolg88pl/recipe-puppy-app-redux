@@ -4,6 +4,8 @@ import MainPage from './components/MainPage';
 import Recipe from './components/Recipe';
 import axios from 'axios';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Provider } from 'react-redux'
+
 
 class App extends Component {
   constructor(props){
