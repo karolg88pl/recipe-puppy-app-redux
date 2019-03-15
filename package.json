@@ -16,7 +16,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://karolg88pl.github.io/recipe-puppy-app",
+  "homepage": "https://karolg88pl.github.io/recipe-puppy-app-redux",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

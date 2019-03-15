@@ -9,7 +9,7 @@ import  store from './store';
 const App = () => {
     return (
       <Provider store={store} >
-      <Router basename="/recipe-puppy-app">
+      <Router>
       <React.Fragment>
         <Navbar />
         <Switch>
