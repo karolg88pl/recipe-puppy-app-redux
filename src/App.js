@@ -4,7 +4,6 @@ import MainPage from './components/MainPage';
 import Recipe from './components/Recipe';
 import axios from 'axios';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import './App.css';
 
 class App extends Component {
   constructor(props){
@@ -15,6 +14,7 @@ class App extends Component {
         expectResults: false
     }
     this.triggerSearch = this.triggerSearch.bind(this);
+
   }
 
   triggerSearch(value){
@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="/recipe-puppy-app">
       <React.Fragment>
         <Navbar />
         <Switch>

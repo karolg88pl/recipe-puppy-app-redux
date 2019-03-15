@@ -13,7 +13,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8"
   },
-  "homepage": "https://karolg88pl.github.io/recipepuppy",
+  "homepage": "https://karolg88pl.github.io/recipe-puppy-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
