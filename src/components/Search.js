@@ -10,11 +10,12 @@ class Search extends Component {
       value:''
     }
 
-    this.onClick = this.onClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
-  onClick(){
+  handleSubmit(e){
+    e.preventDefault();
     this.props.triggerSearch(this.state.value);
   }
 
@@ -25,6 +26,7 @@ class Search extends Component {
   render() {
     return (
       <div style={{ paddingTop: 15 }}>
+      <form onSubmit={this.handleSubmit}>
       <TextField
         style={{marginRight: '15px'}}
         placeholder="Search ingredient"
@@ -33,10 +35,12 @@ class Search extends Component {
         autoFocus={true}
       />
       <Button
-        variant="contained" color="primary"
-        onClick={this.onClick}>
+        variant="contained"
+        color="primary"
+        type="submit">
       Search
       </Button>
+      </form>
       </div>
     );
   }

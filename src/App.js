@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import MainPage from './components/MainPage';
 import Recipe from './components/Recipe';
 import axios from 'axios';
-
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 
@@ -13,10 +12,8 @@ class App extends Component {
 
     this.state = {
         data:[],
-        expectResults: false,
-        choosenItem:''
+        expectResults: false
     }
-
     this.triggerSearch = this.triggerSearch.bind(this);
   }
 
@@ -27,7 +24,6 @@ class App extends Component {
           data: res.data.results.sort((a,b)=>(b.title < a.title)),
           expectResults:true
       });
-      console.log(this.state.data);
     });
   }
 
