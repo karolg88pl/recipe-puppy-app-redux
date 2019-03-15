@@ -5,22 +5,23 @@ import Placeholder from './Placeholder';
 import { connect } from 'react-redux';
 import { search } from '../actions/actions';
 
-const MainPage = () => (
+class MainPage extends React.Component{
+
+  render(){
+    return(
   <React.Fragment>
     <Search  />
-     {(props.listData.length || !props.expectResults)? <List listData={props.listData} /> : <Placeholder/>}
+    {(this.props.listData.length || !this.props.expectResults)? <List listData={this.props.listData} /> : <Placeholder/>}
+
   </React.Fragment>
-);
-
-
-
-
-
+  )
+}
+}
 
 
 const mapStateToProps = state =>({
-  listData: state.data,
-  expectResults: state.expectResults
+  listData: state.search.data,
+  expectResults: state.search.expectResults
 })
 
 export default connect(mapStateToProps, { search })(MainPage);
