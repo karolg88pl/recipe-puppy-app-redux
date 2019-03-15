@@ -24,21 +24,20 @@ class Search extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div style={{ paddingTop: 15 }}>
       <TextField
+        style={{marginRight: '15px'}}
         placeholder="Search ingredient"
         value={this.state.value}
         onChange={this.onChange}
         autoFocus={true}
-        fullWidth={true}
       />
       <Button
-        variant="contained" color="secondary"
-        onClick={this.onClick}
-      >
+        variant="contained" color="primary"
+        onClick={this.onClick}>
       Search
       </Button>
-      </React.Fragment>
+      </div>
     );
   }
 
