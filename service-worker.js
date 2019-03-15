@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/recipe-puppy-app-redux/precache-manifest.7debe79f98e00116e48c9a528a25b766.js"
+  "/recipe-puppy-app-redux/precache-manifest.c75dbfba8ccccd2bb652f5fd5328baf1.js"
 );
 
 workbox.clientsClaim();
