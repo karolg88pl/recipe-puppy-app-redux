@@ -5,13 +5,17 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import { Link } from 'react-router-dom';
 
 const ListElement = (props) => (
    <ListItem>
      <ListItemAvatar>
           <Avatar alt="Avatar" src={props.item.thumbnail} />
      </ListItemAvatar>
-     <ListItemText primary={props.item.title} secondary={props.item.ingredients}/>
+     <Link to={`/recipe/${props.item.title}`} >
+     <ListItemText primary={props.item.title} />
+     </Link>
+     <ListItemText secondary={props.item.ingredients} />
    </ListItem>
 );
 

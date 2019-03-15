@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import MainPage from './components/MainPage';
+import Recipe from './components/Recipe';
 import axios from 'axios';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -44,6 +45,12 @@ class App extends Component {
              expectResults={this.state.expectResults}
             />)}
         />
+        <Route exact path="/recipe/:title"
+        render={(routeProps)=>(
+          <Recipe {...routeProps}
+          data={this.state.data}
+         />)}
+         />
         </Switch>
       </React.Fragment>
       </Router>
