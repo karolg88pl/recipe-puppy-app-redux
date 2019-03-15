@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { connect } from 'react-redux';
+import { search } from '../actions/actions';
 
 class Search extends Component {
   constructor(props){
@@ -16,7 +18,7 @@ class Search extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.triggerSearch(this.state.value);
+    this.props.search(this.state.value);
   }
 
   onChange(e){
@@ -48,4 +50,4 @@ class Search extends Component {
 
 }
 
-export default Search;
+export default connect(null,{ search })(Search);
