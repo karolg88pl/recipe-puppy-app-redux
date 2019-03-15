@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const ListElement = (props) => (
    <ListItem>
      <ListItemAvatar>
-       <Avatar alt="Avatar" src={props.item.thumbnail} />
+       <Avatar alt="Avatar" src={props.item.thumbnail?props.item.thumbnail:require("../static/cook_avatar.png")} />
      </ListItemAvatar>
        <ListItemText
          primary={

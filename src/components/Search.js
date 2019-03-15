@@ -33,6 +33,7 @@ class Search extends Component {
         value={this.state.value}
         onChange={this.onChange}
         autoFocus={true}
+        required
       />
       <Button
         variant="contained"
